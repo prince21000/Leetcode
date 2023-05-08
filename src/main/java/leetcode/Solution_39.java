@@ -2,7 +2,6 @@ package leetcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Solution_39 {
@@ -21,6 +20,7 @@ public class Solution_39 {
         }
 
         for (int i = startIndex; i < candidates.length && sum + candidates[i] <= target; i++){
+            // if( sum + candidates[i] > target) break;
             path.add(candidates[i]);
             sum += candidates[i];
             backtracking(result, candidates, path, sum, target, i);
